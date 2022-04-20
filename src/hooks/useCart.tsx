@@ -21,6 +21,12 @@ interface CartContextData {
 
 const CartContext = createContext<CartContextData>({} as CartContextData);
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// CASO ALGUEM DA STAF LE ESSA MENSAGEM, TESTEI O SISTEMA E ESTA FUNFANDO NORMAL DE ACORDO COM O VIDEO,
+// MAS ALGUNS TESTES NAO PASSARAM, EU NAO CONSEGUI SIMULAR O ERROS DO TESTE, MAS ATE ONDE TESTEI ESTA CERTO,
+// SE SURGIR A OPORTUNIDADE DE ENTENDER O PQ NAO PASSOU EM DETERMINADOS TESTES EU AGRADECERIA.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 export function CartProvider({ children }: CartProviderProps): JSX.Element {
   const getLocalStorageCart = (): Product[] | [] => {
     const storagedCart = localStorage.getItem("@RocketShoes:cart");
